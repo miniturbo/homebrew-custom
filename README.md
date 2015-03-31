@@ -1,6 +1,6 @@
 # homebrew-custom
 
-## Usage
+## Install
 
 ```
 % brew tap miniturbo/custom
