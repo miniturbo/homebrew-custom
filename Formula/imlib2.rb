@@ -13,6 +13,7 @@ class Imlib2 < Formula
   depends_on :x11 => :recommended
   depends_on 'pkg-config' => :build
   depends_on 'jpeg' => :recommended
+  depends_on 'giflib' => :recommended
 
   patch :p1, :DATA
 
