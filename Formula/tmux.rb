@@ -1,18 +1,8 @@
-require 'formula'
-
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
-  url "https://github.com/tmux/tmux/releases/download/2.0/tmux-2.0.tar.gz"
-  sha256 "795f4b4446b0ea968b9201c25e8c1ef8a6ade710ebca4657dd879c35916ad362"
-
-  bottle do
-    cellar :any
-    revision 1
-    sha256 "4a15dbb353298f6ab5db3ad0121e50225328d49da1548bee570f93af4c294368" => :yosemite
-    sha256 "ccc3e43a9e544d74d5a081de07294a8c75d14f9649d7fc2e5bc94cc0107e625d" => :mavericks
-    sha256 "145f66ff2b0adf499ee4a8ceab8ec1556d43b74074921ff1e86a4d7be05492c8" => :mountain_lion
-  end
+  url "https://github.com/tmux/tmux/releases/download/2.1/tmux-2.1.tar.gz"
+  sha256 "31564e7bf4bcef2defb3cb34b9e596bd43a3937cad9e5438701a81a5a9af6176"
 
   head do
     url "https://github.com/tmux/tmux.git"
@@ -22,8 +12,8 @@ class Tmux < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on 'pkg-config' => :build
-  depends_on 'libevent'
+  depends_on "pkg-config" => :build
+  depends_on "libevent"
 
   def patches
     [
@@ -48,7 +38,7 @@ class Tmux < Formula
 
   def caveats; <<-EOS.undent
     Example configurations have been installed to:
-      #{share}/tmux/examples
+      #{pkgshare}/examples
     EOS
   end
 
